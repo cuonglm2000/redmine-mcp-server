@@ -1,5 +1,5 @@
 {
-  "name": "@onozaty/redmine-mcp-server",
+  "name": "@dexxa-tools/redmine-mcp-server",
   "version": "1.2.0",
   "description": "MCP server for Redmine",
   "type": "module",
@@ -16,19 +16,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onozaty/redmine-mcp-server.git"
+    "url": "git+https://github.com/cuonglm2000/redmine-mcp-server.git"
   },
   "keywords": [
     "mcp",
     "modelcontextprotocol",
     "redmine"
   ],
-  "author": "onozaty",
+  "author": "onozaty (forked by Dexxa Tools)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/onozaty/redmine-mcp-server/issues"
+    "url": "https://github.com/cuonglm2000/redmine-mcp-server/issues"
   },
-  "homepage": "https://github.com/onozaty/redmine-mcp-server#readme",
+  "homepage": "https://github.com/cuonglm2000/redmine-mcp-server#readme",
   "devDependencies": {
     "@types/node": "^20.0.0",
     "orval": "^7.10.0",
