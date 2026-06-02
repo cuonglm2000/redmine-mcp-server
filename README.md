@@ -69,7 +69,7 @@ Add the following as MCP configuration for your AI agent:
   "mcpServers": {
     "redmine": {
       "command": "npx",
-      "args": ["-y", "@onozaty/redmine-mcp-server"],
+      "args": ["-y", "@dexxa-tools/redmine-mcp-server"],
       "env": {
         "REDMINE_URL": "https://your-redmine.example.com",
         "REDMINE_API_KEY": "your-api-key-here",
@@ -79,32 +79,6 @@ Add the following as MCP configuration for your AI agent:
   }
 }
 ```
-
-#### Using Docker (Alternative)
-
-If you prefer using Docker:
-
-```json
-{
-  "mcpServers": {
-    "redmine": {
-      "command": "docker",
-      "args": [
-        "run", "--rm", "-i",
-        "-e", "REDMINE_URL=https://your-redmine.example.com",
-        "-e", "REDMINE_API_KEY=your-api-key-here",
-        "-e", "REDMINE_MCP_READ_ONLY=true",
-        "ghcr.io/onozaty/redmine-mcp-server:latest"
-      ]
-    }
-  }
-}
-```
-
-**When to use Docker:**
-- Enterprise environments requiring container isolation
-- Reproducible deployments across different systems
-- Environments where Node.js installation is restricted
 
 Below are specific configuration methods for several MCP clients:
 
@@ -117,7 +91,7 @@ Add the following to `claude_desktop_config.json`:
   "mcpServers": {
     "redmine": {
       "command": "npx",
-      "args": ["-y", "@onozaty/redmine-mcp-server"],
+      "args": ["-y", "@dexxa-tools/redmine-mcp-server"],
       "env": {
         "REDMINE_URL": "https://your-redmine.example.com",
         "REDMINE_API_KEY": "your-api-key-here",
@@ -134,17 +108,17 @@ In Claude Code, you can add MCP servers using the following commands:
 
 Local configuration:
 ```bash
-claude mcp add redmine -e REDMINE_URL=https://your-redmine.example.com -e REDMINE_API_KEY=your-api-key-here -e REDMINE_MCP_READ_ONLY=true -- npx -y @onozaty/redmine-mcp-server
+claude mcp add redmine -e REDMINE_URL=https://your-redmine.example.com -e REDMINE_API_KEY=your-api-key-here -e REDMINE_MCP_READ_ONLY=true -- npx -y @dexxa-tools/redmine-mcp-server@latest
 ```
 
 Project configuration:
 ```bash
-claude mcp add -s project redmine -e REDMINE_URL=https://your-redmine.example.com -e REDMINE_API_KEY=your-api-key-here -e REDMINE_MCP_READ_ONLY=true -- npx -y @onozaty/redmine-mcp-server
+claude mcp add -s project redmine -e REDMINE_URL=https://your-redmine.example.com -e REDMINE_API_KEY=your-api-key-here -e REDMINE_MCP_READ_ONLY=true -- npx -y @dexxa-tools/redmine-mcp-server@latest
 ```
 
 User configuration (global):
 ```bash
-claude mcp add -s user redmine -e REDMINE_URL=https://your-redmine.example.com -e REDMINE_API_KEY=your-api-key-here -e REDMINE_MCP_READ_ONLY=true -- npx -y @onozaty/redmine-mcp-server
+claude mcp add -s user redmine -e REDMINE_URL=https://your-redmine.example.com -e REDMINE_API_KEY=your-api-key-here -e REDMINE_MCP_READ_ONLY=true -- npx -y @dexxa-tools/redmine-mcp-server@latest
 ```
 
 #### Visual Studio Code
@@ -157,7 +131,7 @@ Project configuration (`.vscode/mcp.json`):
     "redmine": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@onozaty/redmine-mcp-server"],
+      "args": ["-y", "@dexxa-tools/redmine-mcp-server"],
       "env": {
         "REDMINE_URL": "https://your-redmine.example.com",
         "REDMINE_API_KEY": "your-api-key-here",
@@ -177,7 +151,7 @@ User configuration (`settings.json`):
       "redmine": {
         "type": "stdio",
         "command": "npx",
-        "args": ["-y", "@onozaty/redmine-mcp-server"],
+        "args": ["-y", "@dexxa-tools/redmine-mcp-server"],
         "env": {
           "REDMINE_URL": "https://your-redmine.example.com",
           "REDMINE_API_KEY": "your-api-key-here",
